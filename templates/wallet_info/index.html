@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Wallet Info</h2>
+    <form action="{% url 'wallet' %}" method="post">
+        {% csrf_token %}
+        <label>Brand Name:</label>
+        <input type="text" name="brand_name"><br><br>
+        <label>Model Number:</label>
+        <input type="text" name="model_number"><br><br>
+        <label>Purchase Date:</label>
+        <input type="date" name="purchase_date"><br><br>
+        <label>Purchase Price:</label>
+        <input type="number" name="purchase_price"><br><br>
+        <label>Purchase Place:</label>
+        <input type="text" name="purchase_place"><br><br>
+        <label>Accessory:</label>
+        <input type="text" name="accessory"><br><br>
+        <label>Precious Metal Purity:</label>
+        <input type="text" name="precious_metal_purity"><br><br>
+        <label>Precious Metal Weight:</label>
+        <input type="number" name="precious_metal_weight"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

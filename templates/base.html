@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wallet Info</title>
+</head>
+<body>
+    <h1>Wallet Info</h1>
+    <ul>
+    {% for wallet in wallets %}
+        <li>
+            {{ wallet.brand_name }} ({{ wallet.model_number }})
+            <ul>
+                <li>Purchase Date: {{ wallet.purchase_date }}</li>
+                <li>Purchase Price: {{ wallet.purchase_price }}</li>
+                <li>Purchase Place: {{ wallet.purchase_place }}</li>
+                <li>Accessory: {{ wallet.accessory }}</li>
+                <li>Precious Metal Purity: {{ wallet.precious_metal_purity }}</li>
+                <li>Precious Metal Weight: {{ wallet.precious_metal_weight }}</li>
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
